@@ -39,7 +39,8 @@ public class QuickSort {
 	}
 	
 	public static void main(String[] args) {
-		Integer[] test = {4,66,1,5,55,90,22,1,87,64,0,1,4,9,3,5,11,76,31};
+		Integer[] test1 = {4,66,1,5,55,90,22,1,87,64,0,1,4,9,3,5,11,76,31};
+		Integer[] test = {9,20,1,11,12,90,7,3,5};
 		System.out.println("Unsorted ARRAY ## "+ Arrays.asList(test));
 		quicksort(test);
 		System.out.println("Sorted ARRAY ## "+ Arrays.asList(test));

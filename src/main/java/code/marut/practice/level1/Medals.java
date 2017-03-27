@@ -2,12 +2,10 @@ package code.marut.practice.level1;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.TreeSet;
 
 /*
 The Olympic Games in Athens end tomorrow. Given the results of the olympic disciplines, generate and return the medal table.
