@@ -5,11 +5,12 @@ public class DTree {
 	DTree left;
 	DTree right;
 	int data;
-	
-	public DTree(int data){
+
+	public DTree(int data) {
 		this.data = data;
 	}
-	public DTree(DTree left, DTree right, int data){
+
+	public DTree(DTree left, DTree right, int data) {
 		this.left = left;
 		this.right = right;
 		this.data = data;
@@ -38,6 +39,7 @@ public class DTree {
 	public void setData(int data) {
 		this.data = data;
 	}
+
 	@Override
 	public String toString() {
 		return new Integer(this.data).toString();

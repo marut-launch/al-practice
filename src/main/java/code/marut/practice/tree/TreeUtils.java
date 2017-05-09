@@ -95,12 +95,61 @@ public class TreeUtils {
 			System.out.println("Tree is not balanced");
 	}
 
+	public static void printTree(DTree tree) {
+		int depth = TreeUtils.maxDepth(tree);
+		Queue<DTree> bfs = new LinkedList<DTree>();
+		int leftSideMembers = 0;
+		bfs.add(tree);
+		int currlevelCnt = 1;
+		while (depth > 0) {
+			int nextLevel = 0;
+			StringBuilder currLevelPrint = new StringBuilder();
+			while (currlevelCnt > 0) {
+				if (leftSideMembers > 0) {
+					leftSideMembers = 2 * ((int) Math.pow(2, depth) - 1) + 1;
+				} else {
+					leftSideMembers = (int) Math.pow(2, depth) - 1;
+				}
+				DTree temp = bfs.poll();
+				currLevelPrint.append(addSpace(leftSideMembers));
+				currLevelPrint.append((temp.data == -10000000) ? (" ") : (temp.data));
+				if (temp.left != null) {
+					bfs.add(temp.left);
+				} else {
+					bfs.add(new DTree(-10000000));
+				}
+				if (temp.right != null) {
+					bfs.add(temp.right);
+				} else {
+					bfs.add(new DTree(-10000000));
+				}
+				nextLevel++;
+				nextLevel++;
+				currlevelCnt--;
+			}
+			System.out.println(currLevelPrint.toString());
+			currlevelCnt = nextLevel;
+			leftSideMembers = 0;
+			depth--;
+		}
+	}
+
+	public static String addSpace(int cnt) {
+		StringBuilder spaces = new StringBuilder();
+		while (cnt > 0) {
+			spaces.append(" ");
+			cnt--;
+		}
+		return spaces.toString();
+	}
+
 	public static void main(String[] args) {
 		DTree t = TreeUtils.exValidBST1();
 		System.out.println("Max Depth T# " + maxDepth(t));
 		System.out.println("(Recursive) Min Depth T# " + minDepth(t));
 		System.out.println("(BFS) Min Depth T# " + minDepth_BFS(t));
-		
-		treeBalanceTest();
+		System.out.println("PRINT TREE");
+		printTree(t);
+		// treeBalanceTest();
 	}
 }

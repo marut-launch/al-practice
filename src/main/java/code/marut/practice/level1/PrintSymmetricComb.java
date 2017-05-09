@@ -6,10 +6,16 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/*
+	Write a function which will return all symmetric combination possible for input number of digits.
+	 Example >> 
+	 1) function (1 digit) >> { "0", "1", "8" }
+	 2) function (2 digit) >> { "0", "1", "8", "00", "11", "88", "96", "69" }
+	 3) function (3 digit) >> { "0", "1", "8", "00", "11", "88", "96", "69", 000, 010, 080, 101, 111, 181, 808, 818, 888, 906, 916, 986, 609, 619, 689 }
+ */
 public class PrintSymmetricComb {
-
 	public static void main(String[] args) {
-		int digits = 4;
+		int digits = 3;
 		List<String> finalLst = new PrintSymmetricComb().allSymmetricComb(digits);
 		System.out.println("FINAL LIST for " + digits + " digits ## " + finalLst);
 		System.out.println(" CNT ## " + finalLst.size());

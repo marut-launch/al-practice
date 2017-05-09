@@ -7,8 +7,18 @@ import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 
+/*
+	Given a input string and list of search string BOLD the search string in input string;
+	For example: 
+	1) IN >> "abccsddtty123fg"
+	   Search Strings >>> ["cc", "123"]
+	   RESULT >> "ab<b>cc</b>sddtty<b>123</b>fg"
+	
+	2) IN >> "askajsccccc299njdnc"
+	   Search Strings >>> ["ccc"]
+	   RESULT >> "askajs<b>ccccc</b>299njdnc"
+ */
 public class BoldTheSearchString {
-
 	public static class Range implements Comparable<Range> {
 		public int start, end;
 
@@ -59,7 +69,7 @@ public class BoldTheSearchString {
 					nEnd = cur.end;
 					toBeRemoved.add(cur);
 					break;
-				}else if(cur.start<start && end > cur.end){
+				} else if (cur.start < start && end > cur.end) {
 					nStart = cur.start;
 					toBeRemoved.add(cur);
 					break;
@@ -82,7 +92,7 @@ public class BoldTheSearchString {
 					break;
 				}
 				addRange(ranges, index, index + s.length());
-				j = index ;
+				j = index;
 			}
 		}
 		if (ranges == null || ranges.isEmpty()) {

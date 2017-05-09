@@ -1,7 +1,13 @@
 package code.marut.practice.level1;
 
+/*
+	Given a input string and integer k (representing k characters) return longest substring with K unique character.
+	Solution >> Keep sliding window to calculate max unique characters.
+	Assumption >> 
+		1) input string will contain only characters not numbers or special character
+		2) All characters will be lower case.
+ */
 public class LongestSubstringWithKUniqueChararcters {
-
 	public String longestSubstring(String in, int uniqueChars) {
 		int start = 0, i = 0;
 		Integer curUniqueCnt = 0;
