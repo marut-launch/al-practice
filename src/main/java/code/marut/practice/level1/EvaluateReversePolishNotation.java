@@ -41,7 +41,8 @@ public class EvaluateReversePolishNotation {
 	}
 
 	public static void main(String[] args) {
-		String[] rpn = new String[]{"8", "1", "2", "+", "12", "*", "-"};
+//		String[] rpn = new String[]{"8", "1", "2", "+", "12", "*", "-"};
+		String[] rpn = new String[]{"4", "13", "5", "/", "+"};
 		Integer value = evalRPN(rpn);
 		System.out.println(String.format("RPN # %s Evaluated to %d", Arrays.asList(rpn), value));
 	}

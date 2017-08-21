@@ -1,4 +1,4 @@
-package code.marut.practice.questions;
+package code.marut.practice.sorting;
 
 import java.util.ArrayList;
 import java.util.Arrays;

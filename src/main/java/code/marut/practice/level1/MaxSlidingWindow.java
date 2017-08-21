@@ -3,7 +3,7 @@ package code.marut.practice.level1;
 import java.util.LinkedList;
 
 public class MaxSlidingWindow {
-	public int[] maxSlidingWindow(int[] nums, int k) {
+	public static int[] maxSlidingWindow(int[] nums, int k) {
 		int[] res = new int[nums.length - k + 1];
 		LinkedList<Integer> deque = new LinkedList<Integer>();
 		for (int i = 0; i < nums.length; i++) {
@@ -20,4 +20,10 @@ public class MaxSlidingWindow {
 		}
 		return res;
 	}
+	
+	public static void main(String[] args) {
+		int nums[] = {};
+		System.out.println(String.format("%s", args));
+	}
+	
 }

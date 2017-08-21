@@ -109,10 +109,57 @@ public class BoldTheSearchString {
 	}
 
 	public static void main(String[] args) {
-		String in = "sdaaaaatyt";
-		List<String> searches = Arrays.asList(new String[] { "aaa" });
+//		String in = "sdaaaatyt";
+		String in = "sdabababctyt";
+		List<String> searches = Arrays.asList(new String[] { "abab" });
 		String up = new BoldTheSearchString().boldSearchStrings(in, searches);
 		System.out.println("INPUT ## " + in + "\nUPDATED ##" + up);
+		boldSearchStr2(in, searches);
 	}
-
+	
+	// Second solution here
+	
+	public static void boldSearchStr2(String in, List<String> searches){
+		TreeSet<Range> ranges  = new TreeSet<BoldTheSearchString.Range>();
+		for(String search:searches){
+			int preprocessed = preProcessed(search);
+			int j=0, last=0;
+			Range lastRange = null;
+			while((j=in.indexOf(search, last))!=-1){
+				if(lastRange!=null && lastRange.end+1>=j){
+					lastRange.end = j+search.length();
+				}else{
+					lastRange = new Range(j, j+search.length());
+					ranges.add(lastRange);
+				}
+				last=j+preprocessed;
+			}
+		}
+		String up = boldStr2(in, ranges);
+		System.out.println("INPUT 2 # "+in);
+		System.out.println("UPDATED 2 # "+up);
+	}
+	
+	public static String boldStr2(String in, TreeSet<Range> ranges){
+		String up = "";
+		int lInd = 0;
+		for (Range range : ranges) {
+			up += in.substring(lInd, range.start) + "<b>" + in.substring(range.start, range.end) + "</b>";
+			lInd = range.end;
+		}
+		up += in.substring(lInd);
+		return up;
+	}
+	public static int preProcessed (String search){
+		int preprocessed = 0, l=0,r=search.length()-1;
+		while(l<r){
+			if(search.charAt(l)==search.charAt(r)){
+				preprocessed++;
+			}
+			l++;r--;
+		}
+		preprocessed=(preprocessed>0?preprocessed:search.length());
+		return preprocessed;
+	}
+	
 }
