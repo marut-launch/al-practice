@@ -1,4 +1,4 @@
-package code.marut.practice.array;
+package code.marut.practice.strings;
 
 /*
  * Write a method to decide if two strings are anagrams or not.

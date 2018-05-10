@@ -11,7 +11,7 @@ the well. Unfortunately, the town's well is in disrepair and needs to be restore
 Each of the town's residents is willing to donate a certain amount, as specified in the int[] donations, which is listed in clockwise order around the well. 
 However, nobody is willing to contribute to a fund to which his neighbor has also contributed. Next-door neighbors are always listed consecutively in donations,
 except that the first and last entries in donations are also for next-door neighbors.
-You must calculate and return the maximum amount of donations that can be collected.
+You must calculate and return the maximum amount of donations that can be collected..
 
 Definition    	
 Class:	BadNeighbors

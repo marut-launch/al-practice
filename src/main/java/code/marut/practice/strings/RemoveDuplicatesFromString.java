@@ -1,4 +1,4 @@
-package code.marut.practice.array;
+package code.marut.practice.strings;
 
 public class RemoveDuplicatesFromString {
 

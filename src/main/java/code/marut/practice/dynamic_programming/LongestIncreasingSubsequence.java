@@ -29,7 +29,9 @@ public class LongestIncreasingSubsequence {
 
 	public static void main(String[] args) {
 //		int arr[] = { 10, 22, 9, 33, 21, 50, 41, 60 };
-		int arr[] = { 10};
+//		int arr[] = { 10};
+		int arr[] = { 10, 9};
+
 		System.out.println("LIS size ## " + lis(arr));
 	}
 
