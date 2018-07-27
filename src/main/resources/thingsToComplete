@@ -1,0 +1,51 @@
+ALGO
+- stock price - best time to buy in and sell.
+- Linked List Sum 
+- Give a list of number, return all subsets of the list.  
+- Longest Palindrome
+- Rotate Matrix  
+- Let's say you have a topographical map of a road, come up with an algorithm to calculate how much rain could be in the road.  
+- How will you find the first and the last occurrence of a number in a sorted list?  
+- Write a function that takes a list of "ranges" and returns a list of the minimum number of "ranges" by combining overlapping "ranges".  
+- Write a function that takes a list of all available cars and returns the 10 nearest cars to a user's location.  
+- write an algorithm to check whether a sudoku board is valid/complete.  
+- Find Island in matrix  
+- Design a mapping application that given start and end coordinate, it will find the best route between.  
+
+TREE/GRAPH
+- Node traversal in a cyclic graph.  
+- Serialize and Deserialize a General Tree  
+- Find if tree is a valid BST  
+- Questions on BST, strings, and Tries  
+- Write a function to return if a tree is a binary tree given the root node. 
+- List all paths that sum to a given target value.
+
+- Recursively traverse a a directed graph  
+
+STRING
+- longest palindromic substring.
+- Convert a string with digits into a literal representation of the number like: 1001 to one thousand one  
+- Write a function that takes a string and returns a list of lists with all possible substring combinations based on a given list of acceptable substrings. Words cannot repeat.  
+- Given a list of names and a string. You are asked to censor out all names in the string  
+- Huffman encoding  
+- Given a string input, create a function that will output a compressed version of the string. E.g. Input = "AAABBZZDDD", Output = "A3B2Z2D3"  
+
+DESIGN
+
+- Rate Limiter design  (Design an API rate limiter  )
+- General system design round about some traffic control system
+- A problem involving a maze in a 2D matrix.  
+- Assume you have some labor for labeling training data, what data will you collect and what model will you use to building a self-driving car system.  
+- Create an elevator system  
+
+SYSTEM
+- Memcached, Kafka, Blocking queue
+
+GENERAL
+- list manipulation, how would you sort it, find unique elements, compare elements between two lists, hash tables
+regex
+- How would we define a valid English considering the upper and smaller case, the brace, the syntax , define the rule first.  
+
+JAVA
+- How would you create a car using objects  
+- Write a task scheduler  
